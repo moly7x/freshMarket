@@ -23,24 +23,24 @@
         android:label="@string/category"
         tools:layout="@layout/fragment_category" />
     <fragment
-        android:id="@+id/offersFragment"
+        android:id="@+id/nav_offers"
         android:name="com.example.freshmarket.OffersFragment"
-        android:label="fragment_offers2"
+        android:label="Offers"
         tools:layout="@layout/fragment_offers2" />
     <fragment
-        android:id="@+id/newsProductFragment"
+        android:id="@+id/nav_new_products"
         android:name="com.example.freshmarket.NewProductFragment"
-        android:label="fragment_news_product"
+        android:label="New Products"
         tools:layout="@layout/fragment_news_product" />
     <fragment
-        android:id="@+id/myOrdersFragment"
+        android:id="@+id/nav_my_orders"
         android:name="com.example.freshmarket.MyOrdersFragment"
-        android:label="fragment_my_orders"
+        android:label="My Orders"
         tools:layout="@layout/fragment_my_orders" />
     <fragment
-        android:id="@+id/myCartsFragment"
+        android:id="@+id/nav_my_carts"
         android:name="com.example.freshmarket.MyCartsFragment"
-        android:label="fragment_my_carts"
+        android:label="My carts"
         tools:layout="@layout/fragment_my_carts" />
 
 </navigation>
