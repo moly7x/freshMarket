@@ -1,4 +1,4 @@
-package com.example.freshmarket;
+package com.example.freshmarket.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.freshmarket.MainActivity;
+import com.example.freshmarket.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity {
