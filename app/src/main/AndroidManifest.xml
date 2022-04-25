@@ -10,14 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FreshMarket">
         <activity
+            android:name=".activities.DetailedActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.ViewAllActivity"
             android:exported="false" />
         <activity
             android:name=".activities.HomeActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".activities.RegistrationActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".activities.LoginActivity"
             android:exported="false" />
