@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "1052277862732",
+    "firebase_url": "https://fresh-market-f39cc-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "fresh-market-f39cc",
+    "storage_bucket": "fresh-market-f39cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1052277862732:android:a4c38cba1d4053d95c5fe9",
+        "android_client_info": {
+          "package_name": "com.example.fresh_market"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1052277862732-2pmo0voauks71mugjhqmj5ba4edn19im.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6Wyj4pa1JQWRyXmNgj-54_QOyjPlZ6Kc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1052277862732-2pmo0voauks71mugjhqmj5ba4edn19im.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1052277862732:android:971c64497b3970775c5fe9",
+        "android_client_info": {
+          "package_name": "com.example.freshmarket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1052277862732-2pmo0voauks71mugjhqmj5ba4edn19im.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6Wyj4pa1JQWRyXmNgj-54_QOyjPlZ6Kc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1052277862732-2pmo0voauks71mugjhqmj5ba4edn19im.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
