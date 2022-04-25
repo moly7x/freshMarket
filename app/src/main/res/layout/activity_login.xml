@@ -7,6 +7,7 @@
     tools:context=".activities.LoginActivity"
     android:background="@color/white"
     >
+
     <ImageView
         android:id="@+id/reg_img"
         android:layout_width="match_parent"
@@ -101,4 +102,5 @@
         app:layout_constraintVertical_bias=".1"
         android:scaleY=".5"
         android:scaleX=".5"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

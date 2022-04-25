@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"/>
-
+    
     <ScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
@@ -146,6 +146,7 @@
                 android:id="@+id/recommended_rec"/>
         </LinearLayout>
     </ScrollView>
+
 
 
 </RelativeLayout>

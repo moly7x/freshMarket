@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.freshmarket">
+    package="com.example.fresh_market">
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.FreshMarket">
+        android:theme="@style/Theme.Fresh_Market">
+        <activity
+            android:name=".activities.PlacedOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.NavCategoryActivity"
+            android:exported="false" />
         <activity
             android:name=".activities.DetailedActivity"
             android:exported="false" />
@@ -17,24 +23,24 @@
             android:exported="false" />
         <activity
             android:name=".activities.HomeActivity"
-            android:exported="true" />
-        <activity
-            android:name=".activities.RegistrationActivity"
-            android:exported="true" />
-        <activity
-            android:name=".activities.LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.FreshMarket.NoActionBar">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activities.RegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Fresh_Market.NoActionBar" />
 
         <meta-data
             android:name="preloaded_fonts"
