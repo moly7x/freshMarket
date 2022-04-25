@@ -16,9 +16,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.freshmarket.R;
 import com.example.freshmarket.adapters.HomeAdapter;
 import com.example.freshmarket.adapters.PopularAdapters;
+import com.example.freshmarket.adapters.RecommendedAdapter;
 import com.example.freshmarket.databinding.FragmentHomeBinding;
 import com.example.freshmarket.models.HomeCategory;
 import com.example.freshmarket.models.PopularModel;
+import com.example.freshmarket.models.RecommendedModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -32,7 +34,7 @@ public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
 
-    RecyclerView popularRec, homeCatRec;
+    RecyclerView popularRec, homeCatRec,recommendedRec;
     FirebaseFirestore db;
 
     //Popular items
@@ -42,6 +44,10 @@ public class HomeFragment extends Fragment {
     // Home category
     List<HomeCategory> categoryList;
     HomeAdapter homeAdapter;
+
+    //Recommended
+    List<RecommendedModel> recommendedModalList;
+    RecommendedAdapter recommendedAdapter;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -51,6 +57,7 @@ public class HomeFragment extends Fragment {
         db = FirebaseFirestore.getInstance();
         popularRec = root.findViewById(R.id.pop_rec);
         homeCatRec = root.findViewById((R.id.explore_rec));
+        recommendedRec = root.findViewById(R.id.recommended_rec);
 
         //Popular items
         popularRec.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false));
@@ -98,7 +105,28 @@ public class HomeFragment extends Fragment {
                     }
                 });
 
+// Recommended
 
+        recommendedRec.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false));
+        recommendedModalList = new ArrayList<>();
+        recommendedAdapter = new RecommendedAdapter(getActivity(),recommendedModalList);
+        recommendedRec.setAdapter(recommendedAdapter);
+        db.collection("Recommended")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                RecommendedModel recommendedModal = document.toObject(RecommendedModel.class);
+                                recommendedModalList.add(recommendedModal);
+                                recommendedAdapter.notifyDataSetChanged();
+                            }
+                        } else {
+                            Toast.makeText(getActivity(),"Error"+task.getException(),Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
         return root;
     }
 
