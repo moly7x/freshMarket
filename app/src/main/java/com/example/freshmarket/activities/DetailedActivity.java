@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -77,5 +78,38 @@ public class DetailedActivity extends AppCompatActivity {
         }
 
         addToCart = findViewById(R.id.add_to_cart);
+        addToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addedToCart();
+            }
+        });
+
+        addItem.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                if(totalQuantity <10){
+                    totalQuantity++;
+                    quantity.setText(String.valueOf(totalQuantity));
+                    totalPrice = viewAllModel.getPrice() * totalQuantity;
+
+                }
+            }
+        });
+        removeItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(totalQuantity > 1){
+                    totalQuantity--;
+                    quantity.setText(String.valueOf(totalQuantity));
+                    totalPrice = viewAllModel.getPrice() * totalQuantity;
+
+                }
+            }
+        });
+    }
+
+    private void addedToCart() {
     }
 }
