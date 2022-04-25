@@ -2,6 +2,7 @@ package com.example.freshmarket.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,11 +27,16 @@ public class ViewAllActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     ViewAllAdapter viewAllAdapter;
     List<ViewAllModel> viewAllModelList;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_all);
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         firestore = FirebaseFirestore.getInstance();
 
